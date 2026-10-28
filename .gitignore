@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# 実行出力（動画・記録は result.json として必要なものだけ results/ に同梱する）
+output/
+retry_video/
+slip_video/
+multiview_video/
+wall_video/
+hold_video/
+est_video/
+negative_video/
+final_video/
+recording_smoke*/
+smoke_test/
+*_trial/
+*_test/
+check_*.png
+*.mp4
+
+# 試験実行の中間ログ
+*.log
+
+# OS / エディタ
+.DS_Store
+Thumbs.db

@@ -1,0 +1,234 @@
+{
+  "basis": "各条件を複数回、各回３物体。故障注入や低摩擦は試験条件であり、自然故障率ではない。低摩擦条件では、すべりによる押し出しを受けた物体の再把持は把持力を弱くしても回復できなかった（実測。否定的結果として記録）。",
+  "statistics_note": "各条件の合計値。小規模試験であり成功率の推定ではない。",
+  "repeats": 3,
+  "runs": [
+    {
+      "case": "normal",
+      "repeat": 1,
+      "sorted_ok": 3,
+      "held_ok": 0,
+      "failures": [],
+      "attempts_used": [
+        1,
+        1,
+        1
+      ],
+      "estimate_events": 0
+    },
+    {
+      "case": "normal",
+      "repeat": 2,
+      "sorted_ok": 3,
+      "held_ok": 0,
+      "failures": [],
+      "attempts_used": [
+        1,
+        1,
+        1
+      ],
+      "estimate_events": 0
+    },
+    {
+      "case": "normal",
+      "repeat": 3,
+      "sorted_ok": 3,
+      "held_ok": 0,
+      "failures": [],
+      "attempts_used": [
+        1,
+        1,
+        1
+      ],
+      "estimate_events": 0
+    },
+    {
+      "case": "purple_hold",
+      "repeat": 1,
+      "sorted_ok": 2,
+      "held_ok": 1,
+      "failures": [],
+      "attempts_used": [
+        1,
+        1,
+        1
+      ],
+      "estimate_events": 0
+    },
+    {
+      "case": "purple_hold",
+      "repeat": 2,
+      "sorted_ok": 2,
+      "held_ok": 1,
+      "failures": [],
+      "attempts_used": [
+        1,
+        1,
+        1
+      ],
+      "estimate_events": 0
+    },
+    {
+      "case": "purple_hold",
+      "repeat": 3,
+      "sorted_ok": 2,
+      "held_ok": 1,
+      "failures": [],
+      "attempts_used": [
+        1,
+        1,
+        1
+      ],
+      "estimate_events": 0
+    },
+    {
+      "case": "low_friction_noest",
+      "repeat": 1,
+      "sorted_ok": 1,
+      "held_ok": 0,
+      "failures": [
+        "outside_fixed_fixture",
+        "outside_fixed_fixture"
+      ],
+      "attempts_used": [
+        1,
+        1,
+        1
+      ],
+      "estimate_events": 0
+    },
+    {
+      "case": "low_friction_noest",
+      "repeat": 2,
+      "sorted_ok": 1,
+      "held_ok": 0,
+      "failures": [
+        "outside_fixed_fixture",
+        "outside_fixed_fixture"
+      ],
+      "attempts_used": [
+        1,
+        1,
+        1
+      ],
+      "estimate_events": 0
+    },
+    {
+      "case": "low_friction_noest",
+      "repeat": 3,
+      "sorted_ok": 1,
+      "held_ok": 0,
+      "failures": [
+        "outside_fixed_fixture",
+        "outside_fixed_fixture"
+      ],
+      "attempts_used": [
+        1,
+        1,
+        1
+      ],
+      "estimate_events": 0
+    },
+    {
+      "case": "low_friction_est",
+      "repeat": 1,
+      "sorted_ok": 0,
+      "held_ok": 0,
+      "failures": [
+        "estimate_unavailable",
+        "no_bilateral_contact",
+        "transfer_lost"
+      ],
+      "attempts_used": [
+        1,
+        2,
+        1
+      ],
+      "estimate_events": 1
+    },
+    {
+      "case": "low_friction_est",
+      "repeat": 2,
+      "sorted_ok": 0,
+      "held_ok": 0,
+      "failures": [
+        "estimate_unavailable",
+        "no_bilateral_contact",
+        "transfer_lost"
+      ],
+      "attempts_used": [
+        1,
+        2,
+        1
+      ],
+      "estimate_events": 1
+    },
+    {
+      "case": "low_friction_est",
+      "repeat": 3,
+      "sorted_ok": 0,
+      "held_ok": 0,
+      "failures": [
+        "estimate_unavailable",
+        "no_bilateral_contact",
+        "transfer_lost"
+      ],
+      "attempts_used": [
+        1,
+        2,
+        1
+      ],
+      "estimate_events": 1
+    }
+  ],
+  "aggregate": {
+    "normal": {
+      "runs": 3,
+      "objects": 9,
+      "sorted_ok_total": 9,
+      "held_ok_total": 0,
+      "estimate_events_total": 0,
+      "failure_reasons": {}
+    },
+    "purple_hold": {
+      "runs": 3,
+      "objects": 9,
+      "sorted_ok_total": 6,
+      "held_ok_total": 3,
+      "estimate_events_total": 0,
+      "failure_reasons": {}
+    },
+    "low_friction_noest": {
+      "runs": 3,
+      "objects": 9,
+      "sorted_ok_total": 3,
+      "held_ok_total": 0,
+      "estimate_events_total": 0,
+      "failure_reasons": {
+        "outside_fixed_fixture": 6
+      }
+    },
+    "low_friction_est": {
+      "runs": 3,
+      "objects": 9,
+      "sorted_ok_total": 0,
+      "held_ok_total": 0,
+      "estimate_events_total": 3,
+      "failure_reasons": {
+        "estimate_unavailable": 3,
+        "no_bilateral_contact": 3,
+        "transfer_lost": 3
+      }
+    }
+  },
+  "regression_checks": {
+    "all_runs_completed": true,
+    "normal_all_sorted": true,
+    "purple_hold_respected": true,
+    "noest_control_aborts_for_ejected": true,
+    "estimation_engaged": true,
+    "ejection_unrecovered_recorded": true,
+    "attempt_limits_respected": true
+  },
+  "errors": []
+}

@@ -1,0 +1,9 @@
+pybullet==3.2.7
+transformers==4.57.1
+torch==2.9.0
+numpy==2.4.6
+pillow==13.0.0
+opencv-python-headless==5.0.0.93
+huggingface-hub==0.36.2
+tokenizers==0.22.2
+safetensors==0.8.0

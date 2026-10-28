@@ -1,0 +1,190 @@
+{
+  "basis": "各条件・各方策１回、各回３物体。故障注入は自然故障率ではない。",
+  "sensor_limit": "シミュレータの接触・高さ・位置。再接近先は固定治具。",
+  "runs": [
+    {
+      "case": "normal_seed0",
+      "max_attempts": 1,
+      "successful_sorts": 3,
+      "objects": 3,
+      "first_attempt_grasps": 3,
+      "recovered_objects": 0,
+      "retry_events": 0,
+      "failures": {}
+    },
+    {
+      "case": "normal_seed0",
+      "max_attempts": 2,
+      "successful_sorts": 3,
+      "objects": 3,
+      "first_attempt_grasps": 3,
+      "recovered_objects": 0,
+      "retry_events": 0,
+      "failures": {}
+    },
+    {
+      "case": "normal_seed7",
+      "max_attempts": 1,
+      "successful_sorts": 3,
+      "objects": 3,
+      "first_attempt_grasps": 3,
+      "recovered_objects": 0,
+      "retry_events": 0,
+      "failures": {}
+    },
+    {
+      "case": "normal_seed7",
+      "max_attempts": 2,
+      "successful_sorts": 3,
+      "objects": 3,
+      "first_attempt_grasps": 3,
+      "recovered_objects": 0,
+      "retry_events": 0,
+      "failures": {}
+    },
+    {
+      "case": "first_open",
+      "max_attempts": 1,
+      "successful_sorts": 0,
+      "objects": 3,
+      "first_attempt_grasps": 0,
+      "recovered_objects": 0,
+      "retry_events": 0,
+      "failures": {
+        "no_bilateral_contact": 3
+      }
+    },
+    {
+      "case": "first_open",
+      "max_attempts": 2,
+      "successful_sorts": 3,
+      "objects": 3,
+      "first_attempt_grasps": 0,
+      "recovered_objects": 3,
+      "retry_events": 3,
+      "failures": {}
+    },
+    {
+      "case": "persistent_open",
+      "max_attempts": 1,
+      "successful_sorts": 0,
+      "objects": 3,
+      "first_attempt_grasps": 0,
+      "recovered_objects": 0,
+      "retry_events": 0,
+      "failures": {
+        "no_bilateral_contact": 3
+      }
+    },
+    {
+      "case": "persistent_open",
+      "max_attempts": 2,
+      "successful_sorts": 0,
+      "objects": 3,
+      "first_attempt_grasps": 0,
+      "recovered_objects": 0,
+      "retry_events": 3,
+      "failures": {
+        "no_bilateral_contact": 3
+      }
+    },
+    {
+      "case": "low_friction",
+      "max_attempts": 1,
+      "successful_sorts": 0,
+      "objects": 3,
+      "first_attempt_grasps": 0,
+      "recovered_objects": 0,
+      "retry_events": 0,
+      "failures": {
+        "outside_fixed_fixture": 3
+      }
+    },
+    {
+      "case": "low_friction",
+      "max_attempts": 2,
+      "successful_sorts": 0,
+      "objects": 3,
+      "first_attempt_grasps": 0,
+      "recovered_objects": 0,
+      "retry_events": 0,
+      "failures": {
+        "outside_fixed_fixture": 3
+      }
+    },
+    {
+      "case": "dim_camera",
+      "max_attempts": 1,
+      "successful_sorts": 3,
+      "objects": 3,
+      "first_attempt_grasps": 3,
+      "recovered_objects": 0,
+      "retry_events": 0,
+      "failures": {}
+    },
+    {
+      "case": "dim_camera",
+      "max_attempts": 2,
+      "successful_sorts": 3,
+      "objects": 3,
+      "first_attempt_grasps": 3,
+      "recovered_objects": 0,
+      "retry_events": 0,
+      "failures": {}
+    }
+  ],
+  "comparisons": [
+    {
+      "case": "normal_seed0",
+      "without_retry": 3,
+      "with_retry": 3,
+      "denominator_each": 3,
+      "difference": 0
+    },
+    {
+      "case": "normal_seed7",
+      "without_retry": 3,
+      "with_retry": 3,
+      "denominator_each": 3,
+      "difference": 0
+    },
+    {
+      "case": "first_open",
+      "without_retry": 0,
+      "with_retry": 3,
+      "denominator_each": 3,
+      "difference": 3
+    },
+    {
+      "case": "persistent_open",
+      "without_retry": 0,
+      "with_retry": 0,
+      "denominator_each": 3,
+      "difference": 0
+    },
+    {
+      "case": "low_friction",
+      "without_retry": 0,
+      "with_retry": 0,
+      "denominator_each": 3,
+      "difference": 0
+    },
+    {
+      "case": "dim_camera",
+      "without_retry": 3,
+      "with_retry": 3,
+      "denominator_each": 3,
+      "difference": 0
+    }
+  ],
+  "regression_checks": {
+    "all_runs_completed": true,
+    "normal_passes_without_retry": true,
+    "normal_has_no_unnecessary_retry": true,
+    "injected_first_failure_detected": true,
+    "injected_first_failure_recovered": true,
+    "persistent_failure_stops": true,
+    "attempt_limits_respected": true
+  },
+  "errors": []
+}
