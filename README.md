@@ -10,7 +10,7 @@ CLIP × PyBullet × Panda 7軸 — カメラ画像と言語候補を照合して
 |---|---|
 | ![多視点録画](docs/img/demo_frame.png) | ![すべり検知](docs/img/slip_recovery.png) |
 
-- 提出動画（YouTube・限定公開）: 【投稿後にここへURLを追記】
+- 提出動画（YouTube・公開）: https://youtu.be/PWyvtp-Bb7g
 - 動画は物理時間で等速。推論待ちの実時間は録画対象外。
 
 ## 実装している機能
